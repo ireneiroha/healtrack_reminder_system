@@ -1,4 +1,4 @@
-Flask Career API for Java Integration
+##Flask Career API for Java Integration
 This repository provides a standalone Flask service that wraps career advice functionality, enabling seamless integration with Java backends via HTTP.
  Features
 
@@ -7,7 +7,7 @@ Configurable with Hugging Face API for enhanced functionality.
 Lightweight and easy to integrate with Java Spring Boot applications.
 Optional health check endpoint for service monitoring.
 
-Setup Instructions
+##Setup Instructions
 1. Prerequisites
 
 Python 3.8+
@@ -26,12 +26,12 @@ Edit .env and add your Hugging Face API token:HUGGINGFACEHUB_API_TOKEN=hf_your_t
 
 
 
-3. Install Dependencies and Run
+##Install Dependencies and Run
 
 Install required Python packages:pip install -r requirements.txt
 
 
-Start the Flask server:python team-java-integration/app.py
+Start the Flask server:python health_ai_api/ai_endpoint.py
 
 
 The server will be available at http://localhost:5000/.
