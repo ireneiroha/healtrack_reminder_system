@@ -2,7 +2,7 @@
 This repository provides a standalone Flask service that wraps career advice functionality, enabling seamless integration with Java backends via HTTP.
  Features
 
-Exposes a /career endpoint to provide career advice based on user input.
+Exposes a /health endpoint to provide career advice based on user input.
 Configurable with Hugging Face API for enhanced functionality.
 Lightweight and easy to integrate with Java Spring Boot applications.
 Optional health check endpoint for service monitoring.
@@ -41,8 +41,8 @@ You can integrate this API with a Java Spring Boot application using either WebC
 Example with WebClient
 WebClient client = WebClient.create("http://localhost:5000");
 String advice = client.post()
-    .uri("/career")
-    .bodyValue(Map.of("user_input", "Which career path should I choose?"))
+    .uri("/health")
+    .bodyValue(Map.of("user_input", "i have a slight headache?"))
     .retrieve()
     .bodyToMono(JsonNode.class)
     .map(json -> json.get("advice").asText())
@@ -51,8 +51,8 @@ String advice = client.post()
 Example with RestTemplate
 RestTemplate rest = new RestTemplate();
 JsonNode resp = rest.postForObject(
-    "http://localhost:5000/career",
-    Map.of("user_input", "Help me choose a career"),
+    "http://localhost:5000/health",
+    Map.of("user_input", "how do i get rid of my acne"),
     JsonNode.class
 );
 String advice = resp.get("advice").asText();
