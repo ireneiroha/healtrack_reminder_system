@@ -16,7 +16,7 @@ A Hugging Face API token (sign up at Hugging Face to get one)
 
 2. Configure Environment
 
-Navigate to the project directory:cd team-java-integration
+Navigate to the project directory:cd health_ai_api
 
 
 Copy the example environment file:cp .env.example .env
@@ -36,7 +36,7 @@ Start the Flask server:python team-java-integration/app.py
 
 The server will be available at http://localhost:5000/.
 
-🛠️ Using with Java Spring Boot
+ Using with Java Spring Boot
 You can integrate this API with a Java Spring Boot application using either WebClient or RestTemplate.
 Example with WebClient
 WebClient client = WebClient.create("http://localhost:5000");
